@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형예제</title>
+
+    <!-- 내부스타일시트 -->
+
+
+    <style>
+    /* 320px이하일때만 보여라. */
+        @media (max-width:320px){
+            body {background-color: aqua;}
+        }
+
+
+/* 321px이상 599px 이하일때만 보여라 */
+@media (min-width:321px) and (max-width:599px)
+{
+    body {background-color: violet;}
+}
+
+        /* 600px 이상일떄만 보여라 */
+        @media (min-width:600px) {body {background-color: yellow;}}
+
+        @media (min-width:320px){h1 {color: red;}}
+
+        @media (min-width:768px) {h1 {color: blue;}}
+
+        @media (min-width:960px) {h1 {color: violet;}}
+
+    </style>
+</head>
+<body>
+
+<h1>반응형연습하기</h1>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia aliquid aperiam ipsam rem ab voluptate tempore accusantium, aliquam molestiae harum natus molestias sunt! Provident tempora debitis tempore, voluptatum maxime sit?</p>
+
+    
+</body>
+</html>
