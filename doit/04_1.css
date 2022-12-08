@@ -1,0 +1,31 @@
+/* 언어설정 */
+@charset "UTF-8";
+
+/* 전체설정 */
+{margin:0; padding:0;}
+
+#wrap{
+    display: flex;
+    flex-flow: row-wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+.header{display: flex;
+order:1;
+position: relative;
+width: 100%;}
+
+.header h1{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 12.5%;
+    height: 142px;
+    background: #ff6b57;
+}
+
+.header nav{
+    width: 87.5%;
+    min-height: 80px;
+    background: ff6b57;
+}
