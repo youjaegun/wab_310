@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+/* 전체설정 */
+* {margin: 0;
+    padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none;
+    color: #888;}
+img {border: none;
+    vertical-align: bottom;}
+
+ html {
+        scroll-behavior: smooth;
+      }
+
+/* 전체화면설정 */
+.wrapper {width:1200px ;
+            margin: 0 auto; }
+section h2 {text-align: center;
+font-family: impact,sans-serif;
+font-size: 80px;}
+section {
+        padding: 7em 0;}/*화면을 전체화면으로 옮기기전 임의설정*/
+section .wrapper {padding: 4em 1em;}
+#about {background-color: #ddd;
+     height: 100vh;
+    clip-path: polygon(0 15% , 100% 0 , 100% 100% , 0 90%);}
+#news {background:linear-gradient(to top , #4db1ec , #a2e29b);
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);}
+#speakers {background-color: #aaa
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);}
+#ticket {background-color: #aaa;}
+
+/* 헤더설정 */
+
+header {background-color: #333;
+        width: 100%;
+        padding: 16px 0;
+    position: fixed;
+left: 0;
+top: 0;
+z-index: 10;}
+
+header .wrapper {display: flex;
+                justify-content: space-between;}
+header .logo {display: block;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;}
+nav ul {display: flex;}
+nav li {}
+nav li a {display: block;
+        font-size: 20px;
+        color: #fff;
+        font-weight: bold;
+        padding: 10px 20px;}
+
+
+/* 메인이미지설정 */
+.mainImg {text-align: center;
+        height: 100vh;
+        background-color:#4db1ec;
+        background-image: url(../img/hero.jpg);
+        background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+display: flex;
+align-items: center;
+animation: bg 24s infinite ;
+}
+
+/* 애니메이션설정 */
+
+@keyframes boldh3 {
+
+    0% {font-weight: bold;
+    font-size: 20px;}
+    100% {font-weight: normal;
+    font-size: 60px;  }
+}
+
+
+@keyframes bg {
+
+    0% {background-color:#4db1ec ;}
+    12.5% {background-color:#1665cc ;}
+    25% {background-color:#b473bf ;}
+    37.5%{background-color:#ffb2c1 ;}
+    50%{background-color: #ff9f67;}
+    62.5% {background-color:#ffd673 ;}
+    75% {background-color: #a2e29b;}
+    87.5% {background-color: #00a2af;}
+    100%{background-color:#4db1ec ;}
+}
+
+.mainImg h3 {font-weight: bold;
+            font-size: 20px;
+            animation: boldh3 3s infinite alternate;}
+
+/* about 설정 */
+#about h2 {background: linear-gradient( 90deg,  rgba(253,189,85,1) 7.8%, rgba(249,131,255,1) 100.3% ););
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;}
+
+/* news설정 */
+
+#news h2 {font-weight: normal;
+    background: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% ););
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;}
+#news ul {background-color: #888;
+            width: 80%;
+            margin: 0 auto;}
+#news li {}
+#news li a {display: block;
+            padding: 20px;
+            font-size: 18px;
+            border-bottom: 1px solid #fff;
+            color: #fff;} 
+#news li span {margin-right: 10px;
+                width: 180px;
+                display: inline-block;}
+
+#speakers h2 {background:linear-gradient( 109.6deg,  rgba(247,253,166,1) 11.2%, rgba(128,255,221,1) 57.8%, rgba(255,128,249,1) 85.9% ););
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;}
+                                
+#ticket h2 {background:linear-gradient( 89.9deg,  rgba(255,243,110,1) 16.9%, rgba(30,204,214,1) 55.1%, rgba(5,54,154,1) 90.7% ););
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;}
+
+ #news li a:hover {background-color: #fff;
+                        color: #00a2af;}
+
+/* speakers설정 */
+
+#speakers .wrapper>div {display: flex;
+            margin-bottom: 20px;}
+#speakers .txt {width: 80%;
+order: 2;
+padding: 10px 48px;}
+#speakers img {width: 20%;
+order: 1;
+border-radius: 50%;
+transition: all 0.5s;}
+
+#speakers .wrapper>div:hover img {
+    border: 1px solid #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    filter: blur(5px);
+}
+
+/* ticket설정 */
+
+#ticket h2 {}
+#ticket form {width: 500px;
+            margin: 0 auto;}
+#ticket label {color: #fff;
+            margin-bottom: 8px;}
+#ticket .ticket {width: 100%;
+                padding: 1em;
+                background-color: rgba(255, 255, 255, 0.6);
+                border: none;
+            font-size: 18px;
+        margin-bottom: 20px;
+        box-sizing: border-box;}
+
+#ticket .ticket:focus {outline: none;}
+#ticket .btn {width: 100%;
+padding: 1em;
+font-size: 18px;
+border: none;
+    background-color: #000;
+    color: #fff;
+cursor: pointer;
+margin-top: 20px;}
+#ticket .btn:hover {background-color: #1665cc;}
+
+/* 카피라이트 설정 */
+.copy {border-top: 1px solid rgba(255, 255, 255, 0.5) ;
+margin-top: 80px;
+padding-top: 40px;}
+
+.copy p {color: #fff;
+        text-align: center;}
+
+
+
+
+

@@ -1,0 +1,40 @@
+/* 언어설정 */
+@charset 'UTF-8';
+
+/* 콘텐츠영역설정 */
+
+
+.content_section01{
+
+    width: 100%;
+    height: 600px;
+    background-color: #33bb00;
+    order: 2;
+
+}
+    .content_section01>div {padding: 30px 20px;}
+.content_section01>div>p {background-color: ;}
+.content_section01>div>ul {padding: 30px;
+    text-align:center;
+    font-size: 22px;
+    color: ;}
+.content_section01 li {margin-bottom: 20px;}
+.content_section01 li a {background-color: aliceblue;
+display: block;
+transition: 0.5s;
+}
+.content_section01 a:hover span {padding: 20px;}               
+
+/* hover시 분인외에 변경할수 있는 것은 자손자만 가능 */
+
+/* 콘텐츠예제영역설정 */
+
+.content_ex {width: 100%;
+            height: 150px;
+            background-color: #ff6600;
+        order: 3;}
+
+.content_ex {width: 100%;
+height: 150px;
+background-color: #ff6600;
+order: 3;}

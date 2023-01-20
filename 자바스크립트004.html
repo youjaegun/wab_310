@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_요소선택</title>
+</head>
+<body>
+    <h1>요소선택 </h1>
+    <p>DOM(document object model)의 html 요소를 선택 생성 삭제 등을 활용한다.</p>
+
+    <h2> 직접선택메서드 </h2>
+    <table border="1">
+        <tr>
+            <td>메서드이름</td>
+            <td>설명</td>
+        </tr>
+
+        <tr>
+            <td>getElementByID('')</td>
+            <td>HTML요소중 id 속성인 요소만 부름</td>
+        </tr>
+        <tr>
+            <td>getElementsClassName('')</td>
+            <td>HTML 요소중 class 속성인 요소를 모두 부름 </td>
+        </tr>
+        <tr>
+            <td>getElementsTagName('')</td>
+            <td>HTML 요소중 태그의 요소를 모두 부름</td>
+        </tr>
+
+        <tr>
+            <td>querySelector()</td>
+            <td>선택된 요소중 첫번째 요소만 선택 / 태그를 제외하고 
+                클래스/아이디 를 부를때는 CSS와 동일하게 부름 
+            </td>
+        </tr>
+        
+        <tr>
+            <td>querySelectorAll()</td>
+            <td>getElementsTagName 과 같은 성질 단, 태그내임외에 다른 중복요소및 클래스도 반영가능</td>
+        </tr>
+    </table>
+
+    <div id="ex">
+
+        <div class="box1 current">
+            <ul>
+                <li>리스트1</li>
+                <li>리스트2</li>
+                <li>리스트3</li>
+            </ul>
+        </div>
+        <div class="box2 current">
+            <ul>
+                <li>리스트1</li>
+                <li>리스트2</li>
+                <li>리스트3</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+
+document.getElementById('ex').style.background= '#363636'
+
+let ex = document.getElementById('ex');
+let box1 = document.getElementsByClassName('box1')[0]
+
+let box = document.getElementsByClassName('current')
+let list = document.querySelector('.box1 li')
+let listAll = document.querySelectorAll('.box2>ul>li');
+ex.style.color = '#ffffff'
+box1.style.background = '#ffff00'
+box[1].style.background = '#ff0000'
+listAll[2].style.color= '#000';
+listAll.item(1).style.background = '#000';
+    </script>
+
+
+
+
+
+<h2>Event</h2>
+<p>선택자 혹은 도큐먼트상에서 행동을 가했을때 발생되는 현상</p>
+
+<table border="1">
+    <tr>
+        <tb>이벤트</tb>
+        <tb>설명</tb>
+    </tr>
+    <tr>
+        <td>click</td>
+        <td>마우스를 클릭했을때 이벤트가 발생된다.</td>
+    </tr>
+    <tr>
+        <td>mouseover</td>
+        <td>마우스가 오버했을떄 이벤트가 발생한다.</td>
+    </tr>
+    <tr>
+        <td>mousemove</td>
+        <td>마우스가 움직였을때 이벤트가 발생한다.</td>
+    </tr>
+    <tr>
+        <td>mouseenter</td>
+        <td>마우스가 들어갔을때 이벤트가 발생한다.</td>
+    </tr>
+    <tr>
+        <td>mouseleave</td>
+        <td>마우스가 떠났을때 이벤트가 발생한다.</td>
+    </tr>
+    <tr>
+        <td>submit</td>
+        <td>submit을 눌렀을때 이벤트가 발생된다.</td>
+    </tr>
+    <tr>
+        <td>load</td>
+        <td>페이지를 열었을떄 이벤트가 발생한다.</td>
+    </tr>
+    <tr>
+        <td>resize</td>
+        <td>사이즈가 변경되었을떄 이벤트가 발생한다.</td>
+    </tr>
+    <tr>
+        <td>scroll</td>
+        <td>스크롤바가 움직였을때 이벤트가 발생한다.</td>
+    </tr>
+</table>
+
+
+    <div class="ex002">
+        <!-- 인라인방식의 이벤트구현 -->
+        <button onclick="showTxt()">click me</button>
+        <p></p>
+        <p></p>
+        <p></p>
+        <button onclick="showtest()">연습해봅시다.</button>
+
+        <!-- addEventListener -->
+        <button id="btn">직접연결창</button>
+
+    </div>
+
+    <script>
+        function showTxt()  {
+            
+    
+            let show = document.querySelector('.ex002>p').innerHTML
+            if(show=='Hello') {
+                document.querySelector('.ex002>p').innerHTML = ''
+                document.querySelector('body').style.background = '#000000'
+                document.querySelector('body').style.color = 'ffffff'
+            }
+            else if(show=='') {
+                document.querySelector('.ex002>p').innerHTML = 'Hello'
+                document.querySelector('body').style.background = '#ffffff'
+                document.querySelector('body').style.color = '000000'
+
+
+            }
+        }
+
+        function showtest()  {
+            
+    
+            let show = document.querySelector('.ex002>p').innerHTML
+            if(show=='') {
+                
+                document.querySelector('body').style.background = '#ffff00'
+                
+            }
+            else if(show=='') {
+                document.querySelector('body').style.background = '#00ffff'
+                
+
+
+            }
+        }
+
+document.getElementById('btn').addEventListener('click',
+function(Event){
+    alert('성공하셨습니다.')
+}
+)
+
+
+
+
+
+
+
+
+    </script>
+
+<style>
+
+body {padding-bottom: 500px;}
+
+</style>
+    
+
+</body>
+</html>
