@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문예제</title>
+</head>
+
+<style>
+         @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+        body {background-image: linear-gradient(to left, #eeeeee 50%,#ffffff 50%);
+            background-size: 20px 100%;
+            font-family: 'Do Hyeon', sans-serif;
+            }
+        h1 {font-size: 60px;
+            text-align: center;
+        letter-spacing: 20px;
+    color: #989898;
+   }
+   .table {width: 80%;
+        margin: 0 auto;
+    }
+.table ul {text-align: center;
+       display: flex;
+    list-style: none;
+margin: 0;
+padding: 0;
+flex-wrap: wrap; width: 100%;}
+.title li {background-color: beige;
+            padding: 20px;
+            color: rgb(225, 140, 4);
+            font-size: 30px;
+           flex: 1;
+        margin: 0 2px; }
+.write li {background-color:#f3877f ;
+     height: 80px;
+     font-size: 28px;
+     color: #fff;
+     flex: 1; 
+     margin: 0 2px;
+     display: flex;
+        justify-content: center;
+    align-items: center;   }
+
+#result {text-align: center;
+    color: #ff6688;
+    font-size: 78px;
+    margin-top: 50px;
+    text-align: center;
+    display: block;
+
+    }
+</style>
+<body>
+
+    <h1>당신의성적표</h1>
+    <div class="table">
+        <ul class="title">
+            <li>국어</li>
+            <li>수학</li>
+            <li>영어</li>
+            <li>총점</li>
+            <li>평균</li>
+        </ul>
+        <ul class="write">
+            <li id="kor" onclick="knum()"></li>
+            <li id="math" onclick="mnum()"></li>
+            <li id="eng" onclick="eNum()"></li>
+            <li id="add">00</li>
+            <li id="avg"></li>
+        </ul>
+    </div>
+
+    <div id="result"></div>
+
+
+   
+  
+
+   
+
+
+
+
+    
+</body>
+</html>
